@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <title>Document</title>
+    <title>querySelector Demo</title>
 </head>
 <body> 
-    <h1 id="title"></h1>
+    <h1 id="main-heading">Hello, World! WELCOME</h1>
+    <p class="description">This is the introudction paragraph.</p>
+    <button id="changeText">Change Text</button>
+    <script>
+        document.querySelector("#changeText").addEventListener("click",
+            function() {
+                let paragraph = document.querySelector(".desription");
+                paragraph.innerText = "The text has been changed!";
+            });
+    </script>
     <script type="text/javascript" src="./script.js"></script>
 </body>
 </HTML>
